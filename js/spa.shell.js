@@ -78,8 +78,7 @@ spa.shell = (function() {
                 );
             stateMap.is_chat_retracted = false;
             if (callback) { callback(jqueryMap.$chat); }
-          }
-          );
+          });
       return true;
     }
 
@@ -92,8 +91,7 @@ spa.shell = (function() {
               );
           stateMap.is_chat_retracted = true;
           if (callback) { callback(jqueryMap.$chat); }
-        }
-        );
+        });
     return true;
   };
 
@@ -118,9 +116,8 @@ spa.shell = (function() {
         }
       } 
 
-    try {
-      $.uriAnchor.setAnchor(anchor_map_revise);
-    } catch (error) {
+    try { $.uriAnchor.setAnchor(anchor_map_revise); } 
+    catch (error) {
       $.uriAnchor.setAnchor(stateMap.anchor_map, null, true);
       bool_return = false;
     }
